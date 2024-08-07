@@ -75,3 +75,4 @@ resource "azurerm_windows_virtual_machine" "testing-vm" {
     version   = "latest"
   }
 }
+}
