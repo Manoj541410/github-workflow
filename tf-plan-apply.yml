@@ -16,7 +16,7 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: 1.9.3  # Specify your Terraform version
+          terraform_version: 1.9.2  # Specify your Terraform version
 
       - name: Terraform Init
         run: terraform init
@@ -27,8 +27,8 @@ jobs:
       - name: Terraform Apply
         env:
           # Example for Azure
-          AZURE_CLIENT_ID: "7238ce36-8aba-43b9-9129-6fb0f11d135b"
-          AZURE_CLIENT_SECRET: "NUM8Q~RghgQ1IkA.ouUvK3Bh8uIZuxjU9Z1Wnc9f"
-          AZURE_TENANT_ID: "fada08c8-2137-44ca-bb22-61341c2a7c4e"
-          AZURE_SUBSCRIPTION_ID: "455a4cc6-5ffa-4e03-8494-1ea9313c918d"
+          AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         run: terraform apply -auto-approve
