@@ -1,9 +1,10 @@
 provider "azurerm" {
-            AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
-          AZURE_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-          AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
-          AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
   features {}
+  client_id = "b82ae5365d184c0c9cec07a9f17b5c95"
+  client_secret = "ad02acd2f79a4870bc96358018504718"
+  tenant_id = "6af5c5c963aa4ec9b0749242fcf727be"
+  subscription_id = "58a8e80f458f43769c543ff0bad3c66c"
   
 }
 
